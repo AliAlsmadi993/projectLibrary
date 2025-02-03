@@ -541,7 +541,7 @@ background-repeat:no-repeat;
                                                         </div>
                                                         <div class="mb-3">
                                                             <label class="small mb-1">Email</label>
-                                                            <asp:TextBox runat="server" ID="email" placeholder="Enter your email" class="form-control"></asp:TextBox>
+                                                            <asp:TextBox runat="server" ID="email" placeholder="Enter your email" class="form-control" ReadOnly="true"></asp:TextBox>
                                                         </div>
                                                         <div class="mb-3">
                                                             <label class="small mb-1">phone</label>
