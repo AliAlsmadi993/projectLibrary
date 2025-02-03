@@ -82,7 +82,7 @@ section {
     z-index: 1000;
     background: #fff;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-    padding: 2rem 9%;
+    padding: 1rem 9%;
 }
 
     .header .logo {
