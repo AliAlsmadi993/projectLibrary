@@ -178,6 +178,11 @@
     <Content Include="AhmadAndali\PendingRequestsBooks.aspx" />
     <Content Include="PendingRequestsRoom.aspx" />
     <Content Include="AhmadAndali\PesndingRequestsRooms.aspx" />
+    <Content Include="saja\0f5395977ab2ab4797913e895a947784.jpg" />
+    <Content Include="saja\logoW01.png" />
+    <Content Include="saja\script.js" />
+    <Content Include="saja\style.css" />
+    <Content Include="saja\styleContactUs.css" />
     <Content Include="saja\WebForm1.aspx" />
     <Content Include="Sofyan\AboutUs.aspx" />
     <Content Include="Sofyan\LoginUser.aspx" />
