@@ -12,11 +12,10 @@
             margin-top: 20px;
             color: #1a202c;
             text-align: left;
-/*            background-color: #e2e8f0;*/
-/*background-image:url("https://i.pinimg.com/736x/58/1b/3a/581b3a5d6ad51ebf7b126d6c2e7eea98.jpg" );*/
-background-repeat:no-repeat;
-
-  background-size: cover;
+            /*            background-color: #e2e8f0;*/
+            /*background-image:url("https://i.pinimg.com/736x/58/1b/3a/581b3a5d6ad51ebf7b126d6c2e7eea98.jpg" );*/
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         .main-body {
@@ -92,215 +91,302 @@ background-repeat:no-repeat;
         .danger {
             color: red;
         }
-                .heading {
-    font-size: 9rem;
-    text-transform: uppercase;
-    color: transparent;
-    -webkit-text-stroke: .05rem var(--main-color);
-    letter-spacing: .2rem;
-    text-align: center;
-    pointer-events: none;
-    position: relative;
-}
 
-.heading span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    color: var(--main-color);
-    font-size: 3rem;
-}
-.headline {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: all .2s linear;
-}
-@media (max-width: 768px) {
-    .heading {
-        font-size: 6rem;
-    }
+        .heading {
+            font-size: 9rem;
+            text-transform: uppercase;
+            color: transparent;
+            -webkit-text-stroke: .05rem var(--main-color);
+            letter-spacing: .2rem;
+            text-align: center;
+            pointer-events: none;
+            position: relative;
+        }
 
-    .heading span {
-        font-size: 2.3rem;
-    }
-}
-.heading span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    color: var(--main-color);
-    font-size: 3rem;
-}
-:root {
-    --main-color: #443;
-    --border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
-    --border-radius-hover: 4% 95% 6% 95% / 95% 4% 92% 5%;
-    --border: .2rem solid var(--main-color);
-    --border-hover: .2rem dashed var(--main-color);
-}
-/* From Uiverse.io by 3bdel3ziz-T */ 
-.card-container {
-  width: 100%;
-  background-color: #E1D8D0;
-  background-image: linear-gradient(
-    139deg,
-    rgba(36, 40, 50, 1) 0%,
-    
-  );
+            .heading span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                color: var(--main-color);
+                font-size: 3rem;
+            }
 
-  user-select: none;
-  border-radius: 10px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
+        .headline {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: all .2s linear;
+        }
 
-.card-container .list-items .list-item label input[type="radio"] {
-  display: none;
-}
+        @media (max-width: 768px) {
+            .heading {
+                font-size: 6rem;
+            }
 
-.card-container .divider {
-  border-top: 1.5px solid #42434a;
-}
+                .heading span {
+                    font-size: 2.3rem;
+                }
+        }
 
-.card-container .list-items {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 0px;
-}
+        .heading span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            color: var(--main-color);
+            font-size: 3rem;
+        }
 
-.card-container .list-items .list-item > label {
-  display: flex;
-  align-items: center;
-  color: #7e8590;
-  gap: 10px;
-  transition: all 0.3s ease-out;
-  padding: 6px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-}
+        :root {
+            --main-color: #443;
+            --border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
+            --border-radius-hover: 4% 95% 6% 95% / 95% 4% 92% 5%;
+            --border: .2rem solid var(--main-color);
+            --border-hover: .2rem dashed var(--main-color);
+        }
+        /* From Uiverse.io by 3bdel3ziz-T */
+        .card-container {
+            width: 100%;
+            background-color: #E1D8D0;
+            background-image: linear-gradient( 139deg, rgba(36, 40, 50, 1) 0%, );
+            user-select: none;
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
 
-.card-container .list-items .list-item label svg {
-  width: 19px;
-  height: 19px;
-  transition: all 0.3s ease-out;
-}
+            .card-container .list-items .list-item label input[type="radio"] {
+                display: none;
+            }
 
-.card-container .list-items .list-item label:has(input[type="radio"]:checked),
-.card-container .list-items .list-item label:hover {
+            .card-container .divider {
+                border-top: 1.5px solid #42434a;
+            }
 
-  color: var(--hover-color);
-}
+            .card-container .list-items {
+                list-style-type: none;
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                padding: 0px;
+            }
 
-.card-container .list-items .list-item label:active {
-  transform: scale(0.96);
-}
+                .card-container .list-items .list-item > label {
+                    display: flex;
+                    align-items: center;
+                    color: #7e8590;
+                    gap: 10px;
+                    transition: all 0.3s ease-out;
+                    padding: 6px;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    font-weight: 600;
+                }
 
-.card-container .list-items .list-item label:has(input[type="radio"]:checked) svg,
-.card-container .list-items .list-item label:hover svg {
-  stroke: var(--hover-storke);
-}
-.membership .box {
-    perspective: 1000px; /* Required for 3D effect */
-}
+                .card-container .list-items .list-item label svg {
+                    width: 19px;
+                    height: 19px;
+                    transition: all 0.3s ease-out;
+                }
 
-.membership .card {
-    width: 39%;
-    height: 200px;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.8s ease;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
+                .card-container .list-items .list-item label:has(input[type="radio"]:checked),
+                .card-container .list-items .list-item label:hover {
+                    color: var(--hover-color);
+                }
 
-.membership .box:hover .card {
-    transform: rotateY(180deg); /* Flip the card on hover */
-}
+                .card-container .list-items .list-item label:active {
+                    transform: scale(0.96);
+                }
 
-.membership .front,
-.membership .back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden; /* Hide the back side of the card */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    border-radius: 15px;
-    background: #fff;
-}
+                .card-container .list-items .list-item label:has(input[type="radio"]:checked) svg,
+                .card-container .list-items .list-item label:hover svg {
+                    stroke: var(--hover-storke);
+                }
 
-.membership .front {
-    background: #E1D8D0;
-}
+        .membership .box {
+            perspective: 1000px; /* Required for 3D effect */
+        }
 
-.membership .back {
-    background: #333;
-    color: #fff;
-    transform: rotateY(180deg); /* Initially hide the back side */
-}
+        .membership .card {
+            width: 39%;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.8s ease;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
 
-.membership h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
+        .membership .box:hover .card {
+            transform: rotateY(180deg); /* Flip the card on hover */
+        }
 
-.membership .price {
-    font-size: 30px;
-    font-weight: bold;
-    color: #333;
-}
+        .membership .front,
+        .membership .back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden; /* Hide the back side of the card */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+            background: #fff;
+        }
 
-    .membership .price span {
-        font-size: 16px;
-        color: #666;
-    }
+        .membership .front {
+            background: #E1D8D0;
+        }
 
-.membership ul {
-    list-style: none;
-    padding: 0;
-}
+        .membership .back {
+            background: #333;
+            color: #fff;
+            transform: rotateY(180deg); /* Initially hide the back side */
+        }
 
-    .membership ul li {
-        font-size: 16px;
-        margin: 10px 0;
-    }
+        .membership h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
 
-@media (max-width: 768px) {
-    .membership .box-container {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-}
+        .membership .price {
+            font-size: 30px;
+            font-weight: bold;
+            color: #333;
+        }
 
-@media (max-width: 480px) {
-    .membership .box-container {
-        grid-template-columns: 1fr;
-    }
-}
+            .membership .price span {
+                font-size: 16px;
+                color: #666;
+            }
 
+        .membership ul {
+            list-style: none;
+            padding: 0;
+        }
 
+            .membership ul li {
+                font-size: 16px;
+                margin: 10px 0;
+            }
+
+        @media (max-width: 768px) {
+            .membership .box-container {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .membership .box-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* From Uiverse.io - Customized */
+        /* Hide the default checkbox */
+        .checkbox-container input {
+            opacity: 0;
+            cursor: pointer;
+            width: 0;
+            height: 0;
+        }
+
+        .checkbox-container {
+            display: block;
+            position: absolute;
+            cursor: pointer;
+            font-size: 20px;
+            user-select: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 3px;
+            background: rgba(216, 216, 216, 0.603);
+            top: 25%;
+            left: 59%;
+        }
+
+            .checkbox-container:hover {
+                background: rgba(197, 197, 197, 0.527);
+            }
+
+        .bar {
+            width: calc(100% - 8px);
+            height: 3px;
+            left: 4px;
+            background: rgb(58, 58, 58);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: .7s transform cubic-bezier(0,1,.33,1.2), background .4s;
+        }
+
+        .bar-indicator {
+            transform: translateY(-50%) rotate(90deg);
+        }
+
+        .checkbox-container input:checked ~ .bar-indicator {
+            transform: translateY(-50%);
+        }
+
+        /* Popup styling */
+        .modal-box {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+            .modal-box button {
+                margin-top: 10px;
+                padding: 8px 16px;
+                border: none;
+                background: #007BFF;
+                color: white;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+
+                .modal-box button:hover {
+                    background: #0056b3;
+                }
+
+        /* Overlay background */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
+
+
         <div>
             <div class="container">
                 <div class="main-body">
@@ -309,139 +395,148 @@ background-repeat:no-repeat;
                             <div class="card">
                                 <div class="card-body">
                                     <div class="d-flex flex-column align-items-center text-center">
-                                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                                        <asp:Image ID="imgProfile" runat="server" CssClass="rounded-circle" Width="150px" />
+                                        <!-- Checkbox Icon -->
+                                        <label class="checkbox-container" onclick="showUploadPopup()">
+                                            <input type="checkbox">
+                                            <div class="bar"></div>
+                                            <div class="bar bar-indicator"></div>
+                                        </label>
+
+                                        <!-- Overlay Background -->
+                                        <div class="modal-overlay" id="overlay" onclick="hideUploadPopup()"></div>
+
+                                        <!-- Popup Window -->
+                                        <div class="modal-box" id="popup">
+                                            <h3>Upload Profile Image</h3>
+                                            <asp:FileUpload ID="fuProfileImage" runat="server" />
+                                            <br>
+                                            <br>
+                                            <asp:Button ID="btnUpload" runat="server" Text="Upload Photo" OnClick="btnUpload_Click" />
+                                            <br>
+                                            <br>
+                                            <button onclick="hideUploadPopup()">close</button>
+                                        </div>
                                         <div class="mt-3" style="width: 100%;">
                                             <h4 runat="server" id="FullN"></h4>
                                             <p class="text-secondary mb-1">Full Stack Developer</p>
                                             <p runat="server" id="Femail" class="text-muted font-size-sm"></p>
                                             <%--<button type="button" class="btn btn-info" onclick="openModal()" style="width: 100%;" >Edit</button>--%>
-                                            <!-- From Uiverse.io by 3bdel3ziz-T --> 
-<div class="card-container">
-    <ul
-      class="list-items"
-      style="--color:#5353ff;--hover-storke:#fff; --hover-color:#fff"
-    >
-      <li class="list-item">
-        <label for="rename">
-          <input type="radio" id="rename" name="filed" checked="" onclick="openModal()" class=" btn-info" />
-          <svg
-            class="lucide lucide-pencil"
-            stroke-linejoin="round"
-            stroke-linecap="round"
-            stroke-width="2"
-            stroke="#7e8590"
-            fill="none"
-            viewBox="0 0 24 24"
-            height="25"
-            width="25"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"
-            ></path>
-            <path d="m15 5 4 4"></path>
-          </svg>
-          Edit Information</label
-        >
-      </li>
-      <li class="list-item" style="--color:#5353ff">
-        <label class="label" for="addmember">
-          <input type="radio" id="addmember" name="filed" class="btn-info" onclick="openUpdatePassModal()" />
-            <svg
-                class="lucide lucide-lock"
-                stroke-linejoin="round"
-                stroke-linecap="round"
-                stroke-width="2"
-                stroke="#7e8590"
-                fill="none"
-                viewBox="0 0 24 24"
-                height="25"
-                width="25"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <path d="M17 10V7a5 5 0 0 0-10 0v3H4v10h16V10h-3zM12 7a3 3 0 0 1 3 3v3H9V10a3 3 0 0 1 3-3z"></path>
-            </svg>
-          Change Password</label
-        >
-      </li>
-      <div class="divider"></div>
-      <li class="list-item" style="--color:#5353ff">
-        <label for="settings">
-          <input type="radio" id="settings" name="filed" />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#7e8590"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-settings"
-          >
-            <path
-              d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"
-            ></path>
-            <circle cx="12" cy="12" r="3"></circle>
-          </svg>
-          Settings</label
-        >
-      </li>
-      <li class="list-item delete-item" style="--color:#8e2a2a">
-        <label for="delete">
-          <input type="radio" id="delete" name="filed" />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#7e8590"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-trash-2"
-          >
-            <path d="M3 6h18"></path>
-            <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
-            <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
-            <line x1="10" x2="10" y1="11" y2="17"></line>
-            <line x1="14" x2="14" y1="11" y2="17"></line>
-          </svg>
-          Delete Account</label
-        >
-      </li>
-      <div class="divider"></div>
-      <li
-        class="list-item"
-        style="--color:rgba(56, 45, 71, 0.836);--hover-storke:#bd89ff;--hover-color:#bd89ff"
-      >
-        <label for="teamaccess">
-          <input type="radio" id="teamaccess" name="filed" />
-  
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#7e8590"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-users-round"
-          >
-            <path d="M18 21a8 8 0 0 0-16 0"></path>
-            <circle cx="10" cy="8" r="5"></circle>
-            <path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"></path>
-          </svg>
-          Team Access</label
-        >
-      </li>
-    </ul>
-  </div>
-  
+                                            <!-- From Uiverse.io by 3bdel3ziz-T -->
+                                            <div class="card-container">
+                                                <ul
+                                                    class="list-items"
+                                                    style="--color: #5353ff; --hover-storke: #fff; --hover-color: #fff">
+                                                    <li class="list-item">
+                                                        <label for="rename">
+                                                            <input type="radio" id="rename" name="filed" checked="" onclick="openModal()" class=" btn-info" />
+                                                            <svg
+                                                                class="lucide lucide-pencil"
+                                                                stroke-linejoin="round"
+                                                                stroke-linecap="round"
+                                                                stroke-width="2"
+                                                                stroke="#7e8590"
+                                                                fill="none"
+                                                                viewBox="0 0 24 24"
+                                                                height="25"
+                                                                width="25"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z">
+                                                                </path>
+                                                                <path d="m15 5 4 4"></path>
+                                                            </svg>
+                                                            Edit Information</label>
+                                                    </li>
+                                                    <li class="list-item" style="--color: #5353ff">
+                                                        <label class="label" for="addmember">
+                                                            <input type="radio" id="addmember" name="filed" class="btn-info" onclick="openUpdatePassModal()" />
+                                                            <svg
+                                                                class="lucide lucide-lock"
+                                                                stroke-linejoin="round"
+                                                                stroke-linecap="round"
+                                                                stroke-width="2"
+                                                                stroke="#7e8590"
+                                                                fill="none"
+                                                                viewBox="0 0 24 24"
+                                                                height="25"
+                                                                width="25"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M17 10V7a5 5 0 0 0-10 0v3H4v10h16V10h-3zM12 7a3 3 0 0 1 3 3v3H9V10a3 3 0 0 1 3-3z"></path>
+                                                            </svg>
+                                                            Change Password</label>
+                                                    </li>
+                                                    <div class="divider"></div>
+                                                    <li class="list-item" style="--color: #5353ff">
+                                                        <label for="settings">
+                                                            <input type="radio" id="settings" name="filed" />
+                                                            <svg
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                width="24"
+                                                                height="24"
+                                                                viewBox="0 0 24 24"
+                                                                fill="none"
+                                                                stroke="#7e8590"
+                                                                stroke-width="2"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                class="lucide lucide-settings">
+                                                                <path
+                                                                    d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z">
+                                                                </path>
+                                                                <circle cx="12" cy="12" r="3"></circle>
+                                                            </svg>
+                                                            Settings</label>
+                                                    </li>
+                                                    <li class="list-item delete-item" style="--color: #8e2a2a">
+                                                        <label for="delete">
+                                                            <input type="radio" id="delete" name="filed" />
+                                                            <svg
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                width="24"
+                                                                height="24"
+                                                                viewBox="0 0 24 24"
+                                                                fill="none"
+                                                                stroke="#7e8590"
+                                                                stroke-width="2"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                class="lucide lucide-trash-2">
+                                                                <path d="M3 6h18"></path>
+                                                                <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                                                <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                                                <line x1="10" x2="10" y1="11" y2="17"></line>
+                                                                <line x1="14" x2="14" y1="11" y2="17"></line>
+                                                            </svg>
+                                                            Delete Account</label>
+                                                    </li>
+                                                    <div class="divider"></div>
+                                                    <li
+                                                        class="list-item"
+                                                        style="--color: rgba(56, 45, 71, 0.836); --hover-storke: #bd89ff; --hover-color: #bd89ff">
+                                                        <label for="teamaccess">
+                                                            <input type="radio" id="teamaccess" name="filed" />
+
+                                                            <svg
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                width="24"
+                                                                height="24"
+                                                                viewBox="0 0 24 24"
+                                                                fill="none"
+                                                                stroke="#7e8590"
+                                                                stroke-width="2"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                class="lucide lucide-users-round">
+                                                                <path d="M18 21a8 8 0 0 0-16 0"></path>
+                                                                <circle cx="10" cy="8" r="5"></circle>
+                                                                <path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"></path>
+                                                            </svg>
+                                                            Team Access</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -487,148 +582,150 @@ background-repeat:no-repeat;
                                         <div class="col-sm-12 text" style="padding-top: 2.5%;">
 
                                             <%--<button type="button" class="btn btn-info" onclick="openUpdatePassModal()" style="width: 100%;">Update Password</button>--%>
-                                            <!-- From Uiverse.io by vinodjangid07 --> 
-                                             <div class="col-sm-3">
-     <h6 class="mb-0" style="font-weight: 900;">Previous Subscriptions :</h6>
- </div>
+                                            <!-- From Uiverse.io by vinodjangid07 -->
+                                            <div class="col-sm-3">
+                                                <h6 class="mb-0" style="font-weight: 900;">Current Subscriptions :</h6>
+                                            </div>
                                             <br />
 
                                             <!-- MEMBERSHIP -->
-<section class="membership" id="membership">
+                                            <section class="membership" id="membership">
 
-  <div class="box-container">
-      <!-- Individual Membership -->
-      <div class="box">
-          <div class="card">
-              <div class="front">
-                  <h3>Individual Membership</h3>
-                  <p class="price">15 JOD<span>/month</span></p>
-                  <small style="color:red;">It expired on 2-2025.</small>
-              </div>
-              <div class="back">
-                  <h3>Individual Membership</h3>
-                  <ul>
-                      <li>Borrow up to 5 books at a time for 2 weeks.</li>
-                      <li>4 drinks of your choice.</li>
-                      <li>20% discount on private rooms.</li>
-                  </ul>
-              </div>
-          </div>
-      </div>
+                                                <div class="box-container">
+                                                    <!-- Individual Membership -->
+                                                    <div class="box">
+                                                        <div class="card">
+                                                            <div class="front">
+                                                                <h3>Individual Membership</h3>
+                                                                <p class="price">15 JOD<span>/month</span></p>
+                                                                <small style="color: red;">It expired on 2-2025.</small>
+                                                            </div>
+                                                            <div class="back">
+                                                                <h3>Individual Membership</h3>
+                                                                <ul>
+                                                                    <li>Borrow up to 5 books at a time for 2 weeks.</li>
+                                                                    <li>4 drinks of your choice.</li>
+                                                                    <li>20% discount on private rooms.</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
 
+                                                </div>
                                         </div>
 
-                                    </div>
+                                        <!-- Edit Profile -->
+                                        <div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="passwordModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="passwordModalLabel">Edit Information</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div>
+                                                            <div class="mb-3">
+                                                                <label class="small mb-1">First Name</label>
+                                                                <asp:TextBox runat="server" ID="fName" placeholder="Enter your first name" class="form-control"></asp:TextBox>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="small mb-1">Last Name</label>
+                                                                <asp:TextBox runat="server" ID="lName" placeholder="Enter your last name" class="form-control"></asp:TextBox>
 
-                                    <!-- Edit Profile -->
-                                    <div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="passwordModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="passwordModalLabel">Edit Profile</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <div>
-                                                        <div class="mb-3">
-                                                            <label class="small mb-1">First Name</label>
-                                                            <asp:TextBox runat="server" ID="fName" placeholder="Enter your first name" class="form-control"></asp:TextBox>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="small mb-1">Email</label>
+                                                                <asp:TextBox runat="server" ID="email" placeholder="Enter your email" class="form-control" ReadOnly="true"></asp:TextBox>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="small mb-1">phone</label>
+                                                                <asp:TextBox runat="server" ID="phone" placeholder="Enter your phone" class="form-control"></asp:TextBox>
+                                                            </div>
+                                                            <asp:Label ID="result2" runat="server" Visible="false" /><br />
+                                                            <asp:Button runat="server" ID="save" OnClick="save_Click" Text="Save Changes" class="btn btn-primary" style="background-color: #443;" />
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                                         </div>
-                                                        <div class="mb-3">
-                                                            <label class="small mb-1">Last Name</label>
-                                                            <asp:TextBox runat="server" ID="lName" placeholder="Enter your last name" class="form-control"></asp:TextBox>
-
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label class="small mb-1">Email</label>
-                                                            <asp:TextBox runat="server" ID="email" placeholder="Enter your email" class="form-control"></asp:TextBox>
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label class="small mb-1">phone</label>
-                                                            <asp:TextBox runat="server" ID="phone" placeholder="Enter your phone" class="form-control"></asp:TextBox>
-                                                        </div>
-                                                        <asp:Label ID="result2" runat="server" Visible="false" /><br />
-                                                        <asp:Button runat="server" ID="save" OnClick="save_Click" Text="Save Changes" class="btn btn-primary" />
-                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- Update Password-->
-                                    <div class="modal fade" id="updatePassModal" tabindex="-1" aria-labelledby="updatePassModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="updatePassModalLabel">Update Password</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <div>
-                                                        <div class="mb-3">
-                                                            <label class="small mb-1" for="oldPass">Current Password</label>
-                                                            <asp:TextBox ID="CurrentPass" runat="server" placeholder="Enter current password" class="form-control"></asp:TextBox>
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label class="small mb-1" for="newPass">New Password</label>
-                                                            <asp:TextBox ID="newPass" runat="server" placeholder="Enter new password" class="form-control" type="password"></asp:TextBox>
+                                        <!-- Update Password-->
+                                        <div class="modal fade" id="updatePassModal" tabindex="-1" aria-labelledby="updatePassModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="updatePassModalLabel">Update Password</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div>
+                                                            <div class="mb-3">
+                                                                <label class="small mb-1" for="oldPass">Current Password</label>
+                                                                <asp:TextBox ID="CurrentPass" runat="server" placeholder="Enter current password" class="form-control"></asp:TextBox>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="small mb-1" for="newPass">New Password</label>
+                                                                <asp:TextBox ID="newPass" runat="server" placeholder="Enter new password" class="form-control" type="password"></asp:TextBox>
 
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label class="small mb-1" for="confirmPass">Confirm Password</label>
-                                                            <asp:TextBox ID="confirmPass" runat="server" placeholder="Confirm new password" class="form-control" type="password"></asp:TextBox>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="small mb-1" for="confirmPass">Confirm Password</label>
+                                                                <asp:TextBox ID="confirmPass" runat="server" placeholder="Confirm new password" class="form-control" type="password"></asp:TextBox>
 
+                                                            </div>
+                                                            <asp:Label ID="result" runat="server" Visible="false" /><br />
+                                                            <asp:Button ID="savepass" runat="server" Text="Save Changes" OnClick="savepass_Click" class="btn btn-primary" style="background-color: #443;" />
+                                                            <button type="button" class="btn btn" data-bs-dismiss="modal">Cancel</button>
                                                         </div>
-                                                        <asp:Label ID="result" runat="server" Visible="false" /><br />
-                                                        <asp:Button ID="savepass" runat="server" Text="Save Changes" OnClick="savepass_Click" class="btn btn-primary" />
-                                                        <button type="button" class="btn btn" data-bs-dismiss="modal">Cancel</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
+                                    </div>
                                 </div>
+
                             </div>
-
                         </div>
+
                     </div>
-
+                    <br />
                 </div>
-                <br />
-            </div>
-            <div class="headline">
-    <h1 class="heading">History<span>Books & Meeting Room</span></h1>
-            </div>
-            <table class="table table-hover custom-table">
-                <thead class="table-dark">
+                <div class="headline">
+                    <h1 class="heading">History<span>Books & Meeting Room</span></h1>
+                </div>
+                <table class="table table-hover custom-table">
+                    <thead class="table-dark">
 
-                    <tr>
-                        <th scope="col">Book Name</th>
-                        <th scope="col">Pick Up</th>
-                        <th scope="col">Delivery</th>
-                    </tr>
-                </thead>
-<%--                <tbody runat="server" id="bookHis">--%>
+                        <tr>
+                            <th scope="col">Book Name</th>
+                            <th scope="col">Pick Up</th>
+                            <th scope="col">Delivery</th>
+                        </tr>
+                    </thead>
+                    <%--                <tbody runat="server" id="bookHis">--%>
 
                 </tbody>
-            </table>
+                </table>
 
-            <table class="table table-hover custom-table">
-                <thead class="table-dark">
+                <table class="table table-hover custom-table">
+                    <thead class="table-dark">
 
-                    <tr>
-                        <th scope="col">Room Name </th>
-                        <th scope="col">Date</th>
-                        <th scope="col">Time</th>
-                        <th scope="col">Snack</th>
-                    </tr>
-                </thead>
-<%--                <tbody runat="server" id="roomHis">--%>
+                        <tr>
+                            <th scope="col">Room Name </th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Snack</th>
+                        </tr>
+                    </thead>
+                    <%--                <tbody runat="server" id="roomHis">--%>
 
                 </tbody>
-            </table>
-        </div>
+                </table>
+            </div>
+
+
+
     </form>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -641,7 +738,15 @@ background-repeat:no-repeat;
             var modal = new bootstrap.Modal(document.getElementById('updatePassModal'));
             modal.show();
         }
+        function showUploadPopup() {
+            document.getElementById("popup").style.display = "block";
+            document.getElementById("overlay").style.display = "block";
+        }
 
+        function hideUploadPopup() {
+            document.getElementById("popup").style.display = "none";
+            document.getElementById("overlay").style.display = "none";
+        }
     </script>
 
 </body>

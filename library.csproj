@@ -220,7 +220,12 @@
     <Content Include="Sofyan\script.js" />
     <Content Include="Sofyan\style.css" />
     <Content Include="Sofyan\styleContactUs.css" />
+    <Content Include="Sura\logo-removebg-preview.png" />
+    <Content Include="Sura\logoW01.png" />
     <Content Include="Sura\profilePage.aspx" />
+    <Content Include="Sura\script.js" />
+    <Content Include="Sura\style.css" />
+    <Content Include="Sura\WebForm1.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -371,6 +376,13 @@
     </Compile>
     <Compile Include="Sura\profilePage.aspx.designer.cs">
       <DependentUpon>profilePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sura\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sura\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

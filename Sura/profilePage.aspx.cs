@@ -3,12 +3,13 @@ using System.IO;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using iText.IO.Colors;
 
 namespace library.Sura
 {
     public partial class profilePage : System.Web.UI.Page
     {
-        public string loggedInEmail = "";
+        public string loggedInEmail ;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -17,6 +18,7 @@ namespace library.Sura
                 GetLoggedInUserEmail();
                 viewUserData();
                 editUserData();
+                imgProfile.ImageUrl = "https://bootdey.com/img/Content/avatar/avatar7.png"; // الصورة الافتراضية
             }
         }
 
@@ -46,11 +48,14 @@ namespace library.Sura
                 foreach (string line in data)
                 {
                     string[] userData = line.Split(',');
+                 
+                    
 
                     fullName.InnerHtml = $"<div>{userData[0]}</div>";
                     lastname.InnerHtml = $"<div>{userData[1]}</div>";
                     email1.InnerHtml = $"<div>{userData[2]}</div>";
                     phone1.InnerHtml = $"<div>{userData[3]}</div>";
+                    FullN.InnerHtml = $"<div>{userData[0]} {userData[1]}</div>";
                     break;
 
                 }
@@ -60,7 +65,7 @@ namespace library.Sura
         // ✅ تعديل بيانات المستخدم وعرضها في الحقول
         protected void editUserData()
         {
-            if (string.IsNullOrEmpty(loggedInEmail)) return;
+            
 
             string file = Server.MapPath("~/App_Data/users.txt");
             if (File.Exists(file))
@@ -171,6 +176,27 @@ namespace library.Sura
                 }
             }
 
+        }
+        protected void btnUpload_Click(object sender, EventArgs e)
+        {
+            if (fuProfileImage.HasFile)
+            {
+                string folderPath = Server.MapPath("~/Uploads/"); // تأكد من وجود مجلد "Uploads" في المشروع
+
+                // إنشاء المجلد إذا لم يكن موجودًا
+                if (!Directory.Exists(folderPath))
+                {
+                    Directory.CreateDirectory(folderPath);
+                }
+
+                // حفظ الملف في المجلد
+                string fileName = Path.GetFileName(fuProfileImage.FileName);
+                string filePath = Path.Combine(folderPath, fileName);
+                fuProfileImage.SaveAs(filePath);
+
+                // تحديث الصورة في الصفحة
+                imgProfile.ImageUrl = "~/Uploads/" + fileName;
+            }
         }
     }
 }
