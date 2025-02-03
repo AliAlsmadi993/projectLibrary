@@ -8,7 +8,7 @@ namespace library.Sura
 {
     public partial class profilePage : System.Web.UI.Page
     {
-        protected string loggedInEmail = "";
+        public string loggedInEmail = "";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -37,7 +37,7 @@ namespace library.Sura
         // ✅ عرض بيانات المستخدم بناءً على الإيميل المسجل حاليًا
         protected void viewUserData()
         {
-            if (string.IsNullOrEmpty(loggedInEmail)) return;
+            
 
             string file = Server.MapPath("~/App_Data/users.txt");
             if (File.Exists(file))
@@ -46,14 +46,13 @@ namespace library.Sura
                 foreach (string line in data)
                 {
                     string[] userData = line.Split(',');
-                    if (userData.Length >= 5 && userData[2] == loggedInEmail) // التحقق من الإيميل
-                    {
+                 
                         fullName.InnerHtml = $"<div>{userData[0]}</div>";
                         lastname.InnerHtml = $"<div>{userData[1]}</div>";
                         email1.InnerHtml = $"<div>{userData[2]}</div>";
                         phone1.InnerHtml = $"<div>{userData[3]}</div>";
                         break;
-                    }
+                    
                 }
             }
         }
@@ -86,7 +85,7 @@ namespace library.Sura
         // ✅ حفظ التعديلات على بيانات المستخدم
         protected void save_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(loggedInEmail)) return;
+            
 
             string file = Server.MapPath("~/App_Data/users.txt");
             if (string.IsNullOrEmpty(fName.Text) || string.IsNullOrEmpty(lName.Text) ||
@@ -104,9 +103,7 @@ namespace library.Sura
                 for (int i = 0; i < lines.Length; i++)
                 {
                     string[] userData = lines[i].Split(',');
-                    if (userData.Length == 5 && userData[2] == loggedInEmail) // البحث عن الإيميل
-                    {
-                        userData[0] = fName.Text;
+                                         userData[0] = fName.Text;
                         userData[1] = lName.Text;
                         userData[2] = email.Text;
                         userData[3] = phone.Text;
@@ -120,7 +117,7 @@ namespace library.Sura
 
                         viewUserData(); // تحديث العرض بعد الحفظ
                         return;
-                    }
+                   
                 }
             }
         }
@@ -128,7 +125,7 @@ namespace library.Sura
         // ✅ تحديث كلمة المرور
         protected void savepass_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(loggedInEmail)) return;
+            
 
             string file = Server.MapPath("~/App_Data/users.txt");
             if (string.IsNullOrEmpty(CurrentPass.Text) || string.IsNullOrEmpty(newPass.Text) || string.IsNullOrEmpty(confirmPass.Text))
@@ -145,8 +142,7 @@ namespace library.Sura
                 for (int i = 0; i < lines.Length; i++)
                 {
                     string[] userData = lines[i].Split(',');
-                    if (userData.Length >= 5 && userData[2] == loggedInEmail) // البحث عن الإيميل
-                    {
+        
                         if (userData[4] != CurrentPass.Text)
                         {
                             result.Text = "The current password you entered is incorrect!";
@@ -174,7 +170,7 @@ namespace library.Sura
                         }
                     }
                 }
-            }
+            
         }
     }
 }
