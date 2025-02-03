@@ -1,2 +1,2 @@
-1,ahmad,reserved
+1,ahmad,available
 2,ali,available

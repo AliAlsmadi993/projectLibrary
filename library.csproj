@@ -220,6 +220,7 @@
     <Content Include="Sofyan\script.js" />
     <Content Include="Sofyan\style.css" />
     <Content Include="Sofyan\styleContactUs.css" />
+    <Content Include="Sofyan\WebForm1.aspx" />
     <Content Include="Sura\profilePage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -364,6 +365,13 @@
     </Compile>
     <Compile Include="Sofyan\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sofyan\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sofyan\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Sura\profilePage.aspx.cs">
       <DependentUpon>profilePage.aspx</DependentUpon>

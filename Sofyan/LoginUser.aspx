@@ -87,6 +87,9 @@
                     <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" TextMode="Password" required></asp:TextBox>
                 </div>
                 <asp:Button ID="btnLogin" runat="server" CssClass="btn-register" Text="Login" OnClick="btnLogin_Click" />
+                <br>
+                <br>
+                <asp:Button ID="btnLoginAdmin" runat="server" CssClass="btn-register" Text="Login Admin" OnClick="btnLoginAdmin_Click" />
             </asp:Panel>
         </div>
     </form>

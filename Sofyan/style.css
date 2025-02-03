@@ -129,7 +129,7 @@ section {
 .home {
     min-height: 100vh;
     padding-top: 12rem;
-    background: url(../image/home-bg.jpg) no-repeat;
+    background: url(./image/home-bg.jpg) no-repeat;
     background-position: center;
     background-size: cover;
 }
@@ -265,7 +265,7 @@ section {
 /* MENU */
 
 .menu {
-    background: url(../image/menu-bg.jpg) no-repeat;
+    background: url(./image/menu-bg.jpg) no-repeat;
     background-position: center;
     background-size: cover;
 }
@@ -408,7 +408,7 @@ section {
 /* Staff */
 
 .staff {
-    background: url(../image/home-bg.jpg) no-repeat;
+    background: url(./image/home-bg.jpg) no-repeat;
 }
 
     .staff .box-container {
