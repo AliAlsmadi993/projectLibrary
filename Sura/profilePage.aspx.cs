@@ -155,7 +155,7 @@ namespace library.Sura
                             userData[4] = newPass.Text; // تحديث كلمة المرور
                             lines[i] = string.Join(",", userData);
                             File.WriteAllLines(file, lines);
-
+                            editpassword[a] = $"{chickpass[0]} {chickpass[1]} {chickpass[2]} {chickpass[3]} {chickpass[4]} {chickpass[5]} {chickpass[6]}";
                             result.Text = "Password updated successfully!";
                             result.Visible = true;
                             result.CssClass = "success";
@@ -172,5 +172,31 @@ namespace library.Sura
                 }
             
         }
+    }
+}
+        //    string file = Server.MapPath("");
+        //    string[] books = File.ReadAllLines(file);
+        //    foreach (var book in books)
+        //    {
+        //        string[] BooksData = book.Split(',');
+        //       bookHis.InnerHtml += $"<tr> <th>{BooksData[0]}</th> <td>{BooksData[1]}</td> <td>{BooksData[2]}</td></tr> ";
+
+
+        //    }
+        //}
+
+        //protected void roomHistory()
+        //{
+        //    string file = Server.MapPath("");
+        //    string[] rooms = File.ReadAllLines(file);
+        //    foreach (var room in rooms)
+        //    {
+        //        string[] roomsData = room.Split(',');
+        //        roomHis.InnerHtml += $"<tr> <th>{roomsData[0]}</th> <td>{roomsData[1]}</td> <td>{roomsData[2]}</td> <td>{roomsData[3]}</td></tr> ";
+
+
+        //    }
+        //}
+
     }
 }

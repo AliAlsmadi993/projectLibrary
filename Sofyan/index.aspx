@@ -17,7 +17,7 @@
 
     <!-- CSS file link -->
     <link href="./style.css" rel="stylesheet" type="text/css" />
-        <link href="./styleContactUs.css" rel="stylesheet" type="text/css" />
+    <link href="./styleContactUs.css" rel="stylesheet" type="text/css" />
 
     <style>
         /* تنسيق القائمة المنسدلة */
@@ -77,7 +77,7 @@
         <header class="header">
             <div id="menu-btn" class="fas fa-bars"></div>
 
-            <img class="logo" style="width: 13%" src="../image/logoW01.png" />
+            <img class="logo" style="width: 13%" src="./image/logoW01.png" />
             <nav class="navbar">
                 <asp:LinkButton ID="lnkHome" runat="server" OnClick="lnkHome_Click">Home</asp:LinkButton>
                 <asp:LinkButton ID="lnkMenu" runat="server" OnClick="lnkMenu_Click">Menu</asp:LinkButton>
@@ -95,12 +95,20 @@
                 <asp:LinkButton ID="lnkContact" runat="server" OnClick="lnkContact_Click">Contact</asp:LinkButton>
             </nav>
             <div>
-                <asp:LinkButton ID="lnkLogin" runat="server" CssClass="btn btn-success btnLogin" OnClick="lnkLogin_Click">
+
+                <!--  <asp:LinkButton ID="lnkLogin" runat="server" CssClass="btn btn-success btnLogin" OnClick="lnkLogin_Click">
             <i class='fas fa-sign-in-alt'></i> Login
                 </asp:LinkButton>
                 <asp:LinkButton ID="lnkRegister" runat="server" CssClass="btn btn-info btnRgstr" OnClick="lnkRegister_Click">
             <i class='fas fa-user-plus'></i> Register
-                </asp:LinkButton>
+                </asp:LinkButton>-->
+
+                <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn btn-success" Visible="false" OnClick="btnLogin_Click" />
+                <asp:Button ID="btnRegister" runat="server" Text="Register" CssClass="btn btn-success" Visible="false" OnClick="btnRegister_Click" />
+                <asp:Button ID="btnLogout" runat="server" Text="Logout" CssClass="btn btn-success" Visible="true" OnClick="btnLogout_Click" />
+                <asp:Button ID="profile" runat="server" Text="Profile" CssClass="btn btn-success" Visible="true" OnClick="profile_Click" />
+
+
             </div>
         </header>
 
@@ -113,7 +121,7 @@
                 <div class="content">
                     <h3>read a book whith fresh coffee in the morning</h3>
 
-                    <asp:LinkButton ID="borrowBook" runat="server" class="btn btnClr" OnClick="borrowBook_Click">Borrow a Book Now</asp:LinkButton>
+                    <asp:LinkButton ID="borrowBook" runat="server" class="btn btnClr" OnClick="borrowBook_Click1">Borrow a Book Now</asp:LinkButton>
                     <asp:LinkButton ID="LinkButton2" runat="server" class="btn btnClr" OnClick="LinkButton2_Click">Book Private Room Now</asp:LinkButton>
                 </div>
                 <div class="image">
@@ -439,7 +447,6 @@
                 <div class="box">
                     <h3>quick links</h3>
                     <a href="#home"><i class="fas fa-arrow-right"></i>Home</a>
-                    <a href="#about"><i class="fas fa-arrow-right"></i>Menu</a>
                     <a href="#menu"><i class="fas fa-arrow-right"></i>Book a Room</a>
                     <a href="#menu"><i class="fas fa-arrow-right"></i>Borrow a Book</a>
                     <a href="#review"><i class="fas fa-arrow-right"></i>About</a>
@@ -454,7 +461,7 @@
                 </div>
                 <div class="box">
                     <h3></h3>
-                    <img class="logo" style="width: 100%" src="../image/logo-removebg-preview.png" />
+                    <img class="logo" style="width: 100%" src="./image/logo-removebg-preview.png" />
 
                 </div>
             </div>

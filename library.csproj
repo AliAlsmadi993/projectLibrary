@@ -159,7 +159,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Abdullah\BorrowBooks.aspx" />
+    <Content Include="Abdullah\WebForm1.aspx" />
     <Content Include="AhmadAndali\AdminDashboard.aspx" />
+    <Content Include="AhmadAndali\WebForm1.aspx" />
     <Content Include="App_Data\admins.txt" />
     <Content Include="App_Data\ApprovedRequestsRoom.txt" />
     <Content Include="App_Data\books.txt" />
@@ -177,6 +179,12 @@
     <Content Include="AhmadAndali\PendingRequestsBooks.aspx" />
     <Content Include="PendingRequestsRoom.aspx" />
     <Content Include="AhmadAndali\PesndingRequestsRooms.aspx" />
+    <Content Include="saja\0f5395977ab2ab4797913e895a947784.jpg" />
+    <Content Include="saja\logoW01.png" />
+    <Content Include="saja\script.js" />
+    <Content Include="saja\style.css" />
+    <Content Include="saja\styleContactUs.css" />
+    <Content Include="saja\WebForm1.aspx" />
     <Content Include="Sofyan\AboutUs.aspx" />
     <Content Include="Sofyan\LoginUser.aspx" />
     <Content Include="Sofyan\pexels-liza-summer-6347902.jpg" />
@@ -218,6 +226,7 @@
     <Content Include="Sofyan\script.js" />
     <Content Include="Sofyan\style.css" />
     <Content Include="Sofyan\styleContactUs.css" />
+    <Content Include="Sofyan\WebForm1.aspx" />
     <Content Include="Sura\profilePage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -228,6 +237,13 @@
     </Compile>
     <Compile Include="Abdullah\BorrowBooks.aspx.designer.cs">
       <DependentUpon>BorrowBooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Abdullah\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Abdullah\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="AhmadAndali\AdminDashboard.aspx.cs">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>
@@ -292,6 +308,13 @@
     <Compile Include="AhmadAndali\PendingRequestsBooks.aspx.designer.cs">
       <DependentUpon>PendingRequestsBooks.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AhmadAndali\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AhmadAndali\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PendingRequestsRoom.aspx.cs">
       <DependentUpon>PendingRequestsRoom.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -307,6 +330,13 @@
       <DependentUpon>PesndingRequestsRooms.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="saja\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="saja\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Sofyan\AboutUs.aspx.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -348,6 +378,13 @@
     </Compile>
     <Compile Include="Sofyan\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sofyan\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sofyan\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Sura\profilePage.aspx.cs">
       <DependentUpon>profilePage.aspx</DependentUpon>

@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ContactUs.aspx.cs" Inherits="library.Sofyan.ContactUs" %>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -23,21 +24,36 @@
         <!-- NAVBAR -->
         <header class="header">
             <div id="menu-btn" class="fas fa-bars"></div>
-            <img class="logo" style="width: 13%" src="../image/logoW01.png" />
+            <img class="logo" style="width: 13%" src="./image/logoW01.png" />
             <nav class="navbar">
                 <asp:LinkButton ID="lnkHome" runat="server" OnClick="lnkHome_Click"> Home </asp:LinkButton>
                 <asp:LinkButton ID="lnkMenu" runat="server" OnClick="lnkMenu_Click"> Menu </asp:LinkButton>
-                <asp:LinkButton ID="lnkBooking" runat="server" OnClick="lnkBooking_Click"> Booking </asp:LinkButton>
+
+                <div class="dropdown">
+                    <asp:LinkButton ID="LinkButton1" runat="server" CssClass="dropbtn" Style="font-weight: normal;">Booking ▼</asp:LinkButton>
+                    <div class="dropdown-content">
+                        <asp:LinkButton ID="lnkBooking" runat="server" OnClick="lnkBooking_Click">Book a Room </asp:LinkButton>
+                        <asp:LinkButton ID="lnkBorrowBook" runat="server" OnClick="lnkBorrowBook_Click">Borrow a Book </asp:LinkButton>
+                    </div>
+                </div>
+
                 <asp:LinkButton ID="lnkAbout" runat="server" OnClick="lnkAbout_Click"> About </asp:LinkButton>
                 <asp:LinkButton ID="lnkContact" runat="server" OnClick="lnkContact_Click"> Contact </asp:LinkButton>
             </nav>
             <div>
-                <asp:LinkButton ID="lnkLogin" runat="server" CssClass="btn btn-success btnLogin" OnClick="lnkLogin_Click">
+                <!--<asp:LinkButton ID="lnkLogin" runat="server" CssClass="btn btn-success btnLogin" OnClick="lnkLogin_Click">
                     <i class='fas fa-sign-in-alt'></i> Login 
                 </asp:LinkButton>
                 <asp:LinkButton ID="lnkRegister" runat="server" CssClass="btn btn-info btnRgstr" OnClick="lnkRegister_Click">
                     <i class='fas fa-user-plus'></i> Register 
-                </asp:LinkButton>
+                </asp:LinkButton>-->
+
+
+                <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn btn-success" Visible="false" OnClick="btnLogin_Click" />
+                <asp:Button ID="btnRegister" runat="server" Text="Register" CssClass="btn btn-info" Visible="false" OnClick="btnRegister_Click" />
+                <asp:Button ID="btnLogout" runat="server" Text="Logout" CssClass="btn btn-success" Visible="true" OnClick="btnLogout_Click" />
+                <asp:Button ID="profile" runat="server" Text="Profile" CssClass="btn btn-success" Visible="true" OnClick="profile_Click" />
+
             </div>
         </header>
 

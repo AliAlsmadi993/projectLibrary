@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace library
 {
@@ -29,13 +30,11 @@ namespace library
 
         private void LoadRooms(string filter = "all", string searchQuery = "")
         {
-            // إذا لم يكن الملف موجودًا، قم بإنشائه
             if (!File.Exists(filePath))
             {
                 File.Create(filePath).Close();
             }
 
-            // قراءة الغرف من الملف
             var rooms = File.ReadAllLines(filePath)
                             .Where(line => !string.IsNullOrWhiteSpace(line))
                             .Select(line => line.Split(','))
@@ -46,14 +45,12 @@ namespace library
                                 Status = parts[2]
                             }).ToList();
 
-            // البحث
             if (!string.IsNullOrEmpty(searchQuery))
             {
                 rooms = rooms.Where(room => room.Name.ToLower().Contains(searchQuery.ToLower()) ||
                                             room.RoomID.ToLower().Contains(searchQuery.ToLower())).ToList();
             }
 
-            // الفلترة
             if (filter == "available")
             {
                 rooms = rooms.Where(room => room.Status == "available").ToList();
@@ -63,37 +60,29 @@ namespace library
                 rooms = rooms.Where(room => room.Status == "reserved").ToList();
             }
 
-            // تخزين النتائج المفلترة
             filteredRooms = rooms;
-
-            // عرض النتائج في الجدول
             gvRooms.DataSource = filteredRooms;
             gvRooms.DataBind();
         }
 
         protected void btnAddRoom_Click(object sender, EventArgs e)
         {
-            // التحقق إذا كان الملف موجودًا
             if (File.Exists(filePath))
             {
-                // الحصول على المعرف التالي
                 var lastLine = File.ReadLines(filePath).LastOrDefault();
                 int nextId = lastLine != null ? int.Parse(lastLine.Split(',')[0]) + 1 : 1;
 
-                // الحصول على البيانات المدخلة
                 string roomName = txtRoomName.Text.Trim();
-                string status = "available"; // يمكن تعديلها لاحقًا إذا أردت
+                string status = "available";
 
-                // صيغة الغرفة
                 string newRoom = $"{nextId},{roomName},{status}";
 
-                // إضافتها إلى الملف
                 File.AppendAllText(filePath, newRoom + Environment.NewLine);
 
-                // تفريغ الحقول
-                txtRoomName.Text = string.Empty;
 
-                // إعادة تحميل الغرف
+                // تنفيذ SweetAlert2 بعد نجاح الإضافة
+                ClientScript.RegisterStartupScript(this.GetType(), "successAlert",
+                    "Swal.fire({ title: 'Success!', text: 'Room added successfully!', icon: 'success', draggable: true });", true);
                 LoadRooms();
             }
         }
@@ -110,5 +99,72 @@ namespace library
             LoadRooms("all", searchQuery);
         }
 
+        protected void gvRooms_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            string roomId = e.CommandArgument.ToString();
+
+            if (e.CommandName == "DeleteRoom")
+            {
+                DeleteRoom(roomId);
+            }
+            else if (e.CommandName == "EditRoom")
+            {
+                LoadRoomForEdit(roomId);
+            }
+        }
+
+        private void DeleteRoom(string roomId)
+        {
+            var rooms = File.ReadAllLines(filePath)
+                            .Where(line => !line.StartsWith(roomId + ","))
+                            .ToList();
+
+            File.WriteAllLines(filePath, rooms);
+
+            // تنفيذ SweetAlert2 بعد نجاح الإضافة
+            ClientScript.RegisterStartupScript(this.GetType(), "successAlert",
+                "Swal.fire({ title: 'Success!', text: 'Room Delete successfully!', icon: 'success', draggable: true });", true);
+            LoadRooms();
+        }
+
+        private void LoadRoomForEdit(string roomId)
+        {
+            var room = File.ReadAllLines(filePath)
+                           .Select(line => line.Split(','))
+                           .Where(parts => parts[0] == roomId)
+                           .Select(parts => new Room { RoomID = parts[0], Name = parts[1], Status = parts[2] })
+                           .FirstOrDefault();
+
+            if (room != null)
+            {
+                hfRoomID.Value = room.RoomID;
+                txtEditRoomName.Text = room.Name;
+                ddlEditRoomStatus.SelectedValue = room.Status;
+
+                popupEdit.Style["display"] = "block";
+                overlay.Style["display"] = "block";
+            }
+        }
+
+        protected void btnSaveChanges_Click(object sender, EventArgs e)
+        {
+            string roomId = hfRoomID.Value;
+            string newName = txtEditRoomName.Text.Trim();
+            string newStatus = ddlEditRoomStatus.SelectedValue;
+
+            var rooms = File.ReadAllLines(filePath)
+                            .Select(line => line.Split(','))
+                            .Select(parts => parts[0] == roomId ? $"{roomId},{newName},{newStatus}" : string.Join(",", parts))
+                            .ToList();
+
+            File.WriteAllLines(filePath, rooms);
+            // تنفيذ SweetAlert2 بعد نجاح الإضافة
+            ClientScript.RegisterStartupScript(this.GetType(), "successAlert",
+                "Swal.fire({ title: 'Success!', text: 'Room Edit successfully!', icon: 'success', draggable: true });", true);
+            LoadRooms();
+
+            popupEdit.Style["display"] = "none";
+            overlay.Style["display"] = "none";
+        }
     }
 }
