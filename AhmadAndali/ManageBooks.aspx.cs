@@ -222,7 +222,7 @@ namespace library
         private void ShowSweetAlert(string title, string message, string icon)
         {
             string script = $"Swal.fire({{title: '{title}', text: '{message}', icon: '{icon}', timer: 2000, showConfirmButton: false }});";
-            ScriptManager.RegisterStartupScript(this, GetType(), "SweetAlert", script, true);
+            //ScriptManager.RegisterStartupScript(this, GetType(), "SweetAlert", script, true);
         }
 
 

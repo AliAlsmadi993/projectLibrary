@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>library</RootNamespace>
     <AssemblyName>library</AssemblyName>
-    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44382</IISExpressSSLPort>
@@ -23,6 +23,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -144,10 +145,6 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
@@ -163,6 +160,7 @@
   <ItemGroup>
     <Content Include="Abdullah\BorrowBooks.aspx" />
     <Content Include="AhmadAndali\AdminDashboard.aspx" />
+    <Content Include="AhmadAndali\WebForm1.aspx" />
     <Content Include="App_Data\admins.txt" />
     <Content Include="App_Data\ApprovedRequestsRoom.txt" />
     <Content Include="App_Data\books.txt" />
@@ -294,6 +292,13 @@
     </Compile>
     <Compile Include="AhmadAndali\PendingRequestsBooks.aspx.designer.cs">
       <DependentUpon>PendingRequestsBooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AhmadAndali\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AhmadAndali\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="PendingRequestsRoom.aspx.cs">
       <DependentUpon>PendingRequestsRoom.aspx</DependentUpon>
