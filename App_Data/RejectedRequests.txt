@@ -1,0 +1,13 @@
+ALI1|user1@example.com|2025-02-10|2025-02-20  
+ALI2|user2@example.com|2025-02-12|2025-02-22  
+ALI1|user3@example.com|2025-02-15|2025-02-25  
+ALI2|user4@example.com|2025-02-18|2025-02-28  
+ALI1|user5@example.com|2025-02-20|2025-03-01  
+ALI1|user1@example.com|2025-02-10|2025-02-20  
+ALI2|user2@example.com|2025-02-12|2025-02-22  
+ALI1|user3@example.com|2025-02-15|2025-02-25  
+ALI2|user4@example.com|2025-02-18|2025-02-28  
+ALI1|user5@example.com|2025-02-20|2025-03-01  
+ALI3|user6@example.com|2025-02-22|2025-03-05  
+ALI5|user7@example.com|2025-02-25|2025-03-10  
+Database Design Fundamentals|abd@gmail.com|2025-02-07T09:21|2025-02-28T09:21
