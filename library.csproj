@@ -159,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Abdullah\BorrowBooks.aspx" />
+    <Content Include="Abdullah\WebForm1.aspx" />
     <Content Include="AhmadAndali\AdminDashboard.aspx" />
     <Content Include="AhmadAndali\WebForm1.aspx" />
     <Content Include="App_Data\admins.txt" />
@@ -229,6 +230,13 @@
     </Compile>
     <Compile Include="Abdullah\BorrowBooks.aspx.designer.cs">
       <DependentUpon>BorrowBooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Abdullah\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Abdullah\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="AhmadAndali\AdminDashboard.aspx.cs">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>

@@ -6,7 +6,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Library Books</title>
+    
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- Font Awesome CDN Link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- CSS file link -->
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+        <link href="./styleContactUs.css" rel="stylesheet" type="text/css" />
+
     <style>
+
+
+         /* تنسيق القائمة المنسدلة */
+ .dropdown {
+     position: relative;
+     display: inline-block;
+ }
+
+ .dropbtn {
+     background: none;
+     border: none;
+     color: white;
+     font-size: 16px;
+     font-weight: 600;
+     cursor: pointer;
+     padding: 10px;
+     transition: 0.3s;
+ }
+
+     .dropbtn:hover {
+         color: #ff9800;
+     }
+
+ .dropdown-content {
+     display: none;
+     position: absolute;
+     background: white;
+     min-width: 200px;
+     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+     border-radius: 5px;
+     z-index: 100;
+ }
+
+     .dropdown-content a, .dropdown-content .aspNetLink {
+         color: #333;
+         padding: 12px 16px;
+         text-decoration: none;
+         display: block;
+         transition: 0.3s;
+     }
+
+         .dropdown-content a:hover, .dropdown-content .aspNetLink:hover {
+             background: #f1f1f1;
+         }
+
+ /* عرض القائمة عند تمرير الماوس */
+ .dropdown:hover .dropdown-content {
+     display: block;
+ }
         /* Add your CSS styles here */
 
         body {
