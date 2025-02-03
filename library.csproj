@@ -179,6 +179,12 @@
     <Content Include="AhmadAndali\PendingRequestsBooks.aspx" />
     <Content Include="PendingRequestsRoom.aspx" />
     <Content Include="AhmadAndali\PesndingRequestsRooms.aspx" />
+    <Content Include="saja\0f5395977ab2ab4797913e895a947784.jpg" />
+    <Content Include="saja\logoW01.png" />
+    <Content Include="saja\script.js" />
+    <Content Include="saja\style.css" />
+    <Content Include="saja\styleContactUs.css" />
+    <Content Include="saja\WebForm1.aspx" />
     <Content Include="Sofyan\AboutUs.aspx" />
     <Content Include="Sofyan\LoginUser.aspx" />
     <Content Include="Sofyan\pexels-liza-summer-6347902.jpg" />
@@ -323,6 +329,13 @@
       <DependentUpon>PesndingRequestsRooms.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="saja\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="saja\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Sofyan\AboutUs.aspx.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
