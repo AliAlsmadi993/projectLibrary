@@ -50,6 +50,16 @@ namespace library
                 lblMessage.Text = "Invalid login credentials!";
             }
         }
+
+        protected void btnLoginAdmin_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        protected void btnLoginUser_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Sofyan/LoginUser.aspx");
+        }
     }
 }
 

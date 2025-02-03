@@ -246,5 +246,55 @@ namespace library
                 File.WriteAllLines(filePath, rooms);
             }
         }
+
+        protected void lnkHome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void lnkBooking_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void lnkContact_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void lnkLogin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void lnkRegister_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void lnkAbout_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void lnkBookRoom_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void lnkBorrowBook_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void lnkAboutUs_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void lnkMenu_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

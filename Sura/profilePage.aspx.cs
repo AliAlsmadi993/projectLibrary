@@ -39,7 +39,7 @@ namespace library.Sura
         // ✅ عرض بيانات المستخدم بناءً على الإيميل المسجل حاليًا
         protected void viewUserData()
         {
-
+            
 
             string file = Server.MapPath("~/App_Data/users.txt");
             if (File.Exists(file))
@@ -90,7 +90,7 @@ namespace library.Sura
         // ✅ حفظ التعديلات على بيانات المستخدم
         protected void save_Click(object sender, EventArgs e)
         {
-
+            
 
             string file = Server.MapPath("~/App_Data/users.txt");
             if (string.IsNullOrEmpty(fName.Text) || string.IsNullOrEmpty(lName.Text) ||
@@ -108,21 +108,21 @@ namespace library.Sura
                 for (int i = 0; i < lines.Length; i++)
                 {
                     string[] userData = lines[i].Split(',');
-                    userData[0] = fName.Text;
-                    userData[1] = lName.Text;
-                    userData[2] = email.Text;
-                    userData[3] = phone.Text;
+                                         userData[0] = fName.Text;
+                        userData[1] = lName.Text;
+                        userData[2] = email.Text;
+                        userData[3] = phone.Text;
 
-                    lines[i] = string.Join(",", userData);
-                    File.WriteAllLines(file, lines); // حفظ التعديلات في الملف
+                        lines[i] = string.Join(",", userData);
+                        File.WriteAllLines(file, lines); // حفظ التعديلات في الملف
 
-                    result2.Text = "Profile updated successfully!";
-                    result2.Visible = true;
-                    result2.CssClass = "success";
+                        result2.Text = "Profile updated successfully!";
+                        result2.Visible = true;
+                        result2.CssClass = "success";
 
-                    viewUserData(); // تحديث العرض بعد الحفظ
-                    return;
-
+                        viewUserData(); // تحديث العرض بعد الحفظ
+                        return;
+                   
                 }
             }
         }
@@ -130,7 +130,7 @@ namespace library.Sura
         // ✅ تحديث كلمة المرور
         protected void savepass_Click(object sender, EventArgs e)
         {
-
+            
 
             string file = Server.MapPath("~/App_Data/users.txt");
             if (string.IsNullOrEmpty(CurrentPass.Text) || string.IsNullOrEmpty(newPass.Text) || string.IsNullOrEmpty(confirmPass.Text))
@@ -198,5 +198,31 @@ namespace library.Sura
                 imgProfile.ImageUrl = "~/Uploads/" + fileName;
             }
         }
+    }
+}
+        //    string file = Server.MapPath("");
+        //    string[] books = File.ReadAllLines(file);
+        //    foreach (var book in books)
+        //    {
+        //        string[] BooksData = book.Split(',');
+        //       bookHis.InnerHtml += $"<tr> <th>{BooksData[0]}</th> <td>{BooksData[1]}</td> <td>{BooksData[2]}</td></tr> ";
+
+
+        //    }
+        //}
+
+        //protected void roomHistory()
+        //{
+        //    string file = Server.MapPath("");
+        //    string[] rooms = File.ReadAllLines(file);
+        //    foreach (var room in rooms)
+        //    {
+        //        string[] roomsData = room.Split(',');
+        //        roomHis.InnerHtml += $"<tr> <th>{roomsData[0]}</th> <td>{roomsData[1]}</td> <td>{roomsData[2]}</td> <td>{roomsData[3]}</td></tr> ";
+
+
+        //    }
+        //}
+
     }
 }

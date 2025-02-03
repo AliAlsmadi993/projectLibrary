@@ -214,6 +214,8 @@
                             <!-- زر الحذف -->
                            <asp:Button ID="btnDelete" runat="server" Text="Delete" CssClass="btn btn-danger btn-sm" 
                             CommandName="DeleteBook" CommandArgument='<%# Eval("BookID") %>' />
+                          
+
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>

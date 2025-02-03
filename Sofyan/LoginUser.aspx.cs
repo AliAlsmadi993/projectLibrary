@@ -45,5 +45,9 @@ namespace library.Sofyan
             Response.Write("<script>alert('Invalid email or password.');</script>");
         }
 
+        protected void btnLoginAdmin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/AhmadAndali/loginadmin.aspx");
+        }
     }
 }

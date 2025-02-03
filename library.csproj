@@ -159,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Abdullah\BorrowBooks.aspx" />
+    <Content Include="Abdullah\WebForm1.aspx" />
     <Content Include="AhmadAndali\AdminDashboard.aspx" />
     <Content Include="AhmadAndali\WebForm1.aspx" />
     <Content Include="App_Data\admins.txt" />
@@ -178,6 +179,11 @@
     <Content Include="AhmadAndali\PendingRequestsBooks.aspx" />
     <Content Include="PendingRequestsRoom.aspx" />
     <Content Include="AhmadAndali\PesndingRequestsRooms.aspx" />
+    <Content Include="saja\0f5395977ab2ab4797913e895a947784.jpg" />
+    <Content Include="saja\logoW01.png" />
+    <Content Include="saja\script.js" />
+    <Content Include="saja\style.css" />
+    <Content Include="saja\styleContactUs.css" />
     <Content Include="saja\WebForm1.aspx" />
     <Content Include="Sofyan\AboutUs.aspx" />
     <Content Include="Sofyan\LoginUser.aspx" />
@@ -222,6 +228,7 @@
     <Content Include="Sofyan\styleContactUs.css" />
     <Content Include="Sura\logo-removebg-preview.png" />
     <Content Include="Sura\logoW01.png" />
+    <Content Include="Sofyan\WebForm1.aspx" />
     <Content Include="Sura\profilePage.aspx" />
     <Content Include="Sura\script.js" />
     <Content Include="Sura\style.css" />
@@ -235,6 +242,13 @@
     </Compile>
     <Compile Include="Abdullah\BorrowBooks.aspx.designer.cs">
       <DependentUpon>BorrowBooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Abdullah\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Abdullah\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="AhmadAndali\AdminDashboard.aspx.cs">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>
@@ -369,6 +383,13 @@
     </Compile>
     <Compile Include="Sofyan\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sofyan\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sofyan\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Sura\profilePage.aspx.cs">
       <DependentUpon>profilePage.aspx</DependentUpon>

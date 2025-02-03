@@ -189,12 +189,20 @@
                     <div class="description">Rooms available for reservation</div>
                 </div>
                 <div class="card">
-                    <h3>Pending Reservations</h3>
+                    <h3>Pending Reservations Books</h3>
                     <div class="value">
                         <asp:Label ID="lblPendingReservations" runat="server" Text="0"></asp:Label>
                     </div>
-                    <div class="description">Reservations awaiting confirmation</div>
+                    <div class="description">Reservations awaiting Books confirmation</div>
                 </div>
+
+                 <div class="card">
+     <h3>Pending Reservations Books</h3>
+     <div class="value">
+         <asp:Label ID="lblPendingReservationsRooms" runat="server" Text="0"></asp:Label>
+     </div>
+     <div class="description">Reservations awaiting Rooms confirmation</div>
+ </div>
             </div>
         </div>
     </form>

@@ -5,6 +5,8 @@
 <head runat="server">
     <title>Pending Book Requests</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <style>
 
 body {
@@ -99,7 +101,7 @@ body {
       }
 
       .btn-approve {
-          background-color: #28a745;
+          background-color: #34495e;
           color: white;
           border: none;
           padding: 5px 10px;
@@ -108,7 +110,7 @@ body {
       }
 
       .btn-reject {
-          background-color: #dc3545;
+          background-color: #34495e;
           color: white;
           border: none;
           padding: 5px 10px;
