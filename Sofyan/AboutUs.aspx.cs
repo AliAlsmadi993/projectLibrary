@@ -149,5 +149,16 @@ namespace library.Sofyan
             Response.Redirect("Register.aspx");
 
         }
+
+        protected void btnLogout_Click1(object sender, EventArgs e)
+        {
+            string filePath = Server.MapPath("~/App_Data/loggedInUser.txt");
+
+            if (File.Exists(filePath))
+            {
+                File.WriteAllText(filePath, string.Empty);
+            }
+            Response.Redirect("LoginUser.aspx");
+        }
     }
 }
