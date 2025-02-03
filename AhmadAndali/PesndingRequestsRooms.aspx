@@ -79,7 +79,7 @@
             background: #f8f9fa;
         }
         .btn-approve {
-            background: #28a745;
+            background: #34495e;
             color: white;
             border: none;
             padding: 6px 12px;
@@ -91,7 +91,7 @@
             background: #218838;
         }
         .btn-reject {
-            background: #dc3545;
+            background: #34495e;
             color: white;
             border: none;
             padding: 6px 12px;

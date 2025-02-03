@@ -1,2 +1,2 @@
-6,ali,ali0000000000000,0,0,reserved,~/Images/Books/default.png,assf
-7,nnn,bfhn,2,1,available,~/Images/Books/default.png,nvjhm
+6,ali,ali0000000000000,0,0,available,~/Images/Books/default.png,assf
+7,nnn,bfhn,2,0,reserved,~/Images/Books/default.png,nvjhm

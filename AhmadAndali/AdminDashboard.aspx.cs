@@ -1,6 +1,4 @@
-﻿
-
-using System;
+﻿using System;
 using System.IO;
 using System.Linq;
 using System.Web.UI;
@@ -22,20 +20,12 @@ namespace library
             int totalBooks = GetTotalBooks();
             int availableRooms = GetAvailableRooms();
             int pendingReservations = GetPendingReservations();
+            int pendingReservationsRooms = GetPendingReservationsRooms();
 
             lblTotalBooks.Text = totalBooks.ToString();
             lblAvailableRooms.Text = availableRooms.ToString();
             lblPendingReservations.Text = pendingReservations.ToString();
-
-            // حساب النسب المئوية لكل إحصائية
-            int totalBooksPercentage = totalBooks > 0 ? 100 : 0;
-            int availableRoomsPercentage = totalBooks > 0 ? (availableRooms * 100) / totalBooks : 0;
-            int pendingReservationsPercentage = totalBooks > 0 ? (pendingReservations * 100) / totalBooks : 0;
-
-            // إضافة النسب إلى العناصر كـ Attribute لتحديث الحلقات الدائرية ديناميكيًا
-            lblTotalBooks.Attributes["style"] = $"--percentage: {totalBooksPercentage}%";
-            lblAvailableRooms.Attributes["style"] = $"--percentage: {availableRoomsPercentage}%";
-            lblPendingReservations.Attributes["style"] = $"--percentage: {pendingReservationsPercentage}%";
+            lblPendingReservationsRooms.Text = pendingReservationsRooms.ToString();
         }
 
         private int GetTotalBooks()
@@ -43,8 +33,7 @@ namespace library
             string filePath = Server.MapPath("~/App_Data/books.txt");
             if (!File.Exists(filePath)) return 0;
 
-            string[] lines = File.ReadAllLines(filePath);
-            return lines.Length; // كل سطر يمثل كتابًا
+            return File.ReadLines(filePath).Count(); // كل سطر يمثل كتابًا
         }
 
         private int GetAvailableRooms()
@@ -52,17 +41,23 @@ namespace library
             string filePath = Server.MapPath("~/App_Data/rooms.txt");
             if (!File.Exists(filePath)) return 0;
 
-            string[] lines = File.ReadAllLines(filePath);
-            return lines.Count(line => line.Contains("available")); // عد الغرف المتاحة
+            return File.ReadLines(filePath).Count(line => line.Contains("available")); // عد الغرف المتاحة فقط
         }
 
         private int GetPendingReservations()
         {
-            string filePath = Server.MapPath("~/App_Data/reservations.txt");
+            string filePath = Server.MapPath("~/App_Data/PendingRequests.txt");
             if (!File.Exists(filePath)) return 0;
 
-            string[] lines = File.ReadAllLines(filePath);
-            return lines.Count(line => line.Contains("Pending")); // عد الحجوزات المعلقة
+            return File.ReadLines(filePath).Count(); // قراءة عدد السطور فقط
+        }
+
+        private int GetPendingReservationsRooms()
+        {
+            string filePath = Server.MapPath("~/App_Data/PendingRequestsRoom.txt"); // ✅ تصحيح المسار ليشير إلى ملف وليس مجلد
+            if (!File.Exists(filePath)) return 0;
+
+            return File.ReadLines(filePath).Count(); // قراءة عدد السطور فقط
         }
     }
 }

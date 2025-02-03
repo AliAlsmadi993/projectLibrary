@@ -1,14 +1,15 @@
-﻿using iText.Kernel.Colors;
-using iText.Kernel.Pdf;
-using iText.Layout;
-using iText.Layout.Element;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using iText.Kernel.Colors;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
 using System.Web.UI.WebControls;
+
 
 namespace ProjectWebforms.Ahmad
 {
@@ -28,29 +29,30 @@ namespace ProjectWebforms.Ahmad
 
         private void LoadUsers()
         {
-            List<User> users = ReadUsersFromFile(usersFilePath);
-            List<User> managedUsers = new List<User>();
+            // قراءة المستخدمين من ملف users.txt
+            List<User> originalUsers = ReadUsersFromFile(usersFilePath);
 
-            foreach (var originalUser in users)
+            // التأكد من وجود المستخدمين في manageUsers.txt
+            List<User> managedUsers = ReadUsersFromFile(manageUsersFilePath);
+
+            foreach (var originalUser in originalUsers)
             {
-                User userCopy = User.FromCsv(originalUser.ToCsv());
-
-                if (!UserExistsInManageFile(userCopy.Email))
+                if (!managedUsers.Any(u => u.Email == originalUser.Email))
                 {
-                    userCopy.Bookings = 0;
-                    userCopy.Delays = 0;
-                    AppendUserToManageFile(userCopy);
+                    originalUser.Bookings = 0;
+                    originalUser.Delays = 0;
+                    managedUsers.Add(originalUser);
                 }
-                else
-                {
-                    userCopy = GetUserFromManageFile(userCopy.Email);
-                }
-                managedUsers.Add(userCopy);
             }
 
+            // تحديث ملف manageUsers.txt
+            WriteUsersToFile(manageUsersFilePath, managedUsers);
+
+            // عرض البيانات
             gvUsers.DataSource = managedUsers;
             gvUsers.DataBind();
 
+            // تحميل القائمة السوداء
             List<User> blacklistedUsers = ReadUsersFromFile(blacklistFilePath);
             gvBlacklistedUsers.DataSource = blacklistedUsers;
             gvBlacklistedUsers.DataBind();
@@ -68,29 +70,20 @@ namespace ProjectWebforms.Ahmad
                     users.Add(User.FromCsv(line));
                 }
             }
+
             return users;
         }
 
-        private bool UserExistsInManageFile(string email)
+        private void WriteUsersToFile(string filePath, List<User> users)
         {
-            return File.Exists(manageUsersFilePath) && File.ReadAllLines(manageUsersFilePath).Any(line => line.Contains(email));
-        }
-
-        private User GetUserFromManageFile(string email)
-        {
-            var users = ReadUsersFromFile(manageUsersFilePath);
-            return users.FirstOrDefault(u => u.Email == email);
-        }
-
-        private void AppendUserToManageFile(User user)
-        {
-            File.AppendAllText(manageUsersFilePath, user.ToCsv() + Environment.NewLine);
+            File.WriteAllLines(filePath, users.Select(u => u.ToCsv()));
         }
 
         protected void btnSearchUser_Click(object sender, EventArgs e)
         {
             string searchQuery = txtUserSearch.Text.Trim().ToLower();
             List<User> users = ReadUsersFromFile(manageUsersFilePath);
+
             var filteredUsers = users.Where(u => u.Email.ToLower().Contains(searchQuery) || u.FirstName.ToLower().Contains(searchQuery)).ToList();
 
             gvUsers.DataSource = filteredUsers;
@@ -100,42 +93,25 @@ namespace ProjectWebforms.Ahmad
         protected void btnWarnUser_Click(object sender, EventArgs e)
         {
             string userEmail = (sender as Button).CommandArgument;
-            List<User> users = ReadUsersFromFile(manageUsersFilePath);
+            List<User> managedUsers = ReadUsersFromFile(manageUsersFilePath);
 
-            foreach (var user in users)
+            foreach (var user in managedUsers)
             {
                 if (user.Email == userEmail)
                 {
                     user.Delays++;
 
+                    // إذا وصل إلى 3 تحذيرات، يتم نقله إلى القائمة السوداء
                     if (user.Delays >= 3)
                     {
-                        users.Remove(user);
+                        managedUsers.Remove(user);
                         AppendUserToBlacklist(user);
                     }
                     break;
                 }
             }
 
-            WriteUsersToFile(manageUsersFilePath, users);
-            LoadUsers();
-        }
-
-        protected void btnRemoveWarnings_Click(object sender, EventArgs e)
-        {
-            string userEmail = (sender as Button).CommandArgument;
-            List<User> users = ReadUsersFromFile(manageUsersFilePath);
-
-            foreach (var user in users)
-            {
-                if (user.Email == userEmail)
-                {
-                    user.Delays = 0;
-                    break;
-                }
-            }
-
-            WriteUsersToFile(manageUsersFilePath, users);
+            WriteUsersToFile(manageUsersFilePath, managedUsers);
             LoadUsers();
         }
 
@@ -145,21 +121,15 @@ namespace ProjectWebforms.Ahmad
             List<User> blacklistedUsers = ReadUsersFromFile(blacklistFilePath);
             List<User> managedUsers = ReadUsersFromFile(manageUsersFilePath);
 
-            // البحث عن المستخدم في القائمة السوداء
-            User userToRestore = blacklistedUsers.FirstOrDefault(u => u.Email == userEmail);
-
+            var userToRestore = blacklistedUsers.FirstOrDefault(u => u.Email == userEmail);
             if (userToRestore != null)
             {
-                // إزالته من القائمة السوداء
                 blacklistedUsers.Remove(userToRestore);
-                WriteUsersToFile(blacklistFilePath, blacklistedUsers);
+                userToRestore.Delays = 2; // تقليل التحذيرات
+                managedUsers.Add(userToRestore);
 
-                // إعادة إضافته إلى قائمة المستخدمين العاديين
-                if (!managedUsers.Any(u => u.Email == userEmail))
-                {
-                    managedUsers.Add(userToRestore);
-                    WriteUsersToFile(manageUsersFilePath, managedUsers);
-                }
+                WriteUsersToFile(blacklistFilePath, blacklistedUsers);
+                WriteUsersToFile(manageUsersFilePath, managedUsers);
             }
 
             LoadUsers();
@@ -184,7 +154,7 @@ namespace ProjectWebforms.Ahmad
                     .SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER));
                 document.Add(new Paragraph("\n"));
 
-                iText.Layout.Element.Table table = new iText.Layout.Element.Table(new float[] { 2, 2, 3, 2, 2, 2 }).UseAllAvailableWidth();
+                var table = new iText.Layout.Element.Table(new float[] { 2, 2, 3, 2, 2, 2 }).UseAllAvailableWidth();
                 table.AddHeaderCell(new Cell().Add(new Paragraph("First Name").SetBackgroundColor(ColorConstants.LIGHT_GRAY)));
                 table.AddHeaderCell(new Cell().Add(new Paragraph("Last Name").SetBackgroundColor(ColorConstants.LIGHT_GRAY)));
                 table.AddHeaderCell(new Cell().Add(new Paragraph("Email").SetBackgroundColor(ColorConstants.LIGHT_GRAY)));
@@ -209,11 +179,6 @@ namespace ProjectWebforms.Ahmad
             Response.AppendHeader("Content-Disposition", "attachment; filename=UsersList.pdf");
             Response.TransmitFile(pdfPath);
             Response.End();
-        }
-
-        private void WriteUsersToFile(string filePath, List<User> users)
-        {
-            File.WriteAllLines(filePath, users.Select(u => u.ToCsv()));
         }
 
         public class User
